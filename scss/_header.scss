@@ -1,0 +1,455 @@
+/*----------------------------------------------------
+_top.scss
+----------------------------------------------------*/
+.wrapper {
+  .header-wrap {
+    position: relative;
+    z-index: 99;
+    
+    .pc-header {
+      position: fixed;
+      width: 100%;
+      height: 83px;
+      z-index: 99;
+      background-color: rgba(255, 255, 255, 0.9);
+      
+      .cover {
+        padding: 0 20px 0 40px;
+        max-width: 1440px;
+        width: 100%;
+        height: 84px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        max-width: 280px;
+      }
+      .ul {
+        display: flex;
+        align-items: center;
+
+        .li {
+          position: relative;
+          margin-right: 15px;
+          font-size: 15px;
+          font-weight: 500;
+
+          &:last-child {
+            margin-right: 0;
+          }
+          a {
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: -2px;
+              left: 0%;
+              width: 100%;
+              height: 2px;
+              background:#333333;
+              transition: all .3s;
+              transform: scale(0, 1);
+              transform-origin: left top;
+            }
+            &:hover {
+              &::after {
+                transform: scale(1, 1);
+              }
+            }
+          }
+        }
+        .tel {
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+          font-size: 15px;
+          transition: all .3s;
+
+          &::before {
+            content: "";
+            background-image: url(../img/top/tel_1.png);
+            display: inline-block;
+            background-size: cover;
+            width: 26px;
+            height: 26px;
+            margin-right: 7px;
+          }
+          a {
+            &::after {
+              display: none;
+            }
+            &:hover {
+              opacity: .8;
+            }
+          }
+        }
+        .reserve {
+          border-radius: 11px;
+          color: #fff;
+          background-color: #8C504F;
+          padding: 8px 10px;
+          font-weight: 700;
+          line-height: 22px;
+          transition: all .3s;
+          border: 1px solid #8C504F;
+
+          &::before {
+            position: relative;
+            top: 2px;
+            content: "";
+            background-image: url(../img/top/reserve_1.png);
+            display: inline-block;
+            background-size: cover;
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+          }
+          &:hover {
+            background-color: #fff;
+
+            &::before {
+              background-image: url(../img/top/reserve_2.png);
+            }
+            a {
+              color: #8C504F;
+            }
+          }
+          a {
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .sp-header {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    .header-wrap {
+      .pc-header {
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1373px) {
+  .wrapper {
+    .header-wrap {
+      .pc-header {
+        .logo {
+          max-width: 200px;
+        }
+        .ul {
+          .li {
+            margin-right: 12px;
+            font-size: 14px;
+          }
+          .tel {
+            &::before {
+              width: 20px;
+              height: 20px;
+              margin-right: 4px;
+            }
+          }
+          .reserve {
+            padding: 6px 12px;
+
+            &::before {
+              width: 14px;
+              height: 14px;
+              margin-right: 4px;
+            }
+            a {
+              position: relative;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .wrapper {
+    .header-wrap {
+      .pc-header {
+        .logo {
+          max-width: 180px;
+        }
+        .ul {
+          .li {
+            margin-right: 8px;
+            font-size: 12px;
+          }
+          .tel {
+            &::before {
+              width: 16px;
+              height: 16px;
+              margin-right: 4px;
+            }
+          }
+          .reserve {
+
+            &::before {
+              width: 14px;
+              height: 14px;
+              margin-right: 4px;
+            }
+            a {
+              position: relative;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .wrapper {
+    .header-wrap {
+      .pc-header {
+
+        .logo {
+          max-width: 160px;
+        }
+        .ul {
+          .li {
+            margin-right: 8px;
+            font-size: 10px;
+          }
+          .tel {
+            &::before {
+              width: 16px;
+              height: 16px;
+              margin-right: 4px;
+            }
+          }
+          .reserve {
+
+            &::before {
+              width: 14px;
+              height: 14px;
+              margin-right: 4px;
+            }
+            a {
+              position: relative;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .wrapper {
+    .header-wrap {
+      .pc-header {
+        display: none;
+      }
+      .sp-header {
+        display: block !important;
+        position: fixed;
+        width: 100%;
+        z-index: 99;
+        background-color: #fff;
+
+        .sp-header-wrap {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: 64px;
+          padding: 0 20px;
+
+          .header-logo {
+            width: 200px;
+            z-index: 99;
+          }
+          .sp-box {
+            display: flex;
+          }
+          .menu-btn {
+            position: relative;
+            display: flex;
+            height: 100%;
+            width: 81px;
+            justify-content: center;
+            align-items: center;
+            z-index: 90;
+            background-color: #535961;
+
+            span {
+              &::before {
+                bottom: 10px;
+              }
+              &::after {
+                top: 10px;
+              }
+            }
+          }
+          .menu-btn span,
+          .menu-btn span:before,
+          .menu-btn span:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            display: block;
+            height: 2px;
+            width: 34px;
+            background-color: #8C504F;
+          }
+          #menu-btn-check {
+            display: none;
+          }
+          // 3bonsen
+          #menu-btn-check:checked ~ .menu-btn span {
+            background-color: rgba(255, 255, 255, 0); /*メニューオープン時は真ん中の線を透明にする*/
+          }
+          #menu-btn-check:checked ~ .menu-btn span::before {
+            bottom: 0;
+            transform: rotate(45deg);
+          }
+          #menu-btn-check:checked ~ .menu-btn span::after {
+            top: 0;
+            transform: rotate(-45deg);
+          }
+          #menu-btn-check:checked ~ .header-logo {
+            z-index: -1;
+          }
+          .menu-content {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 100%; /*leftの値を変更してメニューを画面外へ*/
+            z-index: 80;
+            transition: all 0.5s; /*アニメーション設定*/
+            background: #fff;
+            
+            .wrap {
+              background: linear-gradient(180deg, #3CB37A 99.99%, #F8FFFB 100%);
+              padding: 50px 0 80px;
+              height: calc(100vh - 78px);
+              overflow: scroll;
+
+              ul {
+                text-align: center;
+                margin-bottom: 32px;
+  
+                li {
+                  margin-bottom: 20px;
+  
+                  a {
+                    display: block;
+                    width: 100%;
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: #fff;
+                  }
+                  &:last-child {
+                    margin-bottom: 0;
+                  }
+                }
+              }
+              .sns {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 18px;
+  
+                .icon {
+                  width: 32px;
+                  height: 32px;
+                }
+              }
+            }
+          }
+          #menu-btn-check:checked ~ .menu-content {
+            left: 0; /*メニューを画面内へ*/
+          }
+          #menu-btn-check:checked ~ .menu-btn span {
+            background-color: rgba(255, 255, 255, 0);
+          }
+          #menu-btn-check:checked ~ .menu-btn span:before {
+            background-color: #fff;
+          }
+          #menu-btn-check:checked ~ .menu-btn span:after {
+            background-color: #fff;
+          }
+        }
+        .reserve {
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+          background: #FFFFFF;
+          box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.25);
+          display: flex;
+          justify-content: space-around;
+          gap: 15px;
+          padding: 18px 20px;
+          z-index: 999;
+
+          .net {
+            a {
+              display: flex;
+              align-items: center;
+              gap: 6px;
+              color: #fff;
+              font-size: 14px;
+              font-weight: bold;
+              background-color: #1CA851;
+              padding: 13px 10px;
+              border-radius: 5px;
+
+              &::before {
+                content: "";
+                display: inline-block;
+                background-image: url(../img/top/net.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 12px;
+                height: 12px;
+              }
+            }
+          }
+          .tel {
+            text-align: center;
+            line-height: 20px;
+
+            .jp {
+              font-size: 14px;
+            }
+            .box {
+              .te {
+                font-size: 12px;
+              }
+              .num {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 364px) {
+  .wrapper {
+    .header-wrap {
+      .sp-header {
+        .reserve {
+          padding: 15px 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,419 @@
+/*----------------------------------------------------
+_footer.scss
+----------------------------------------------------*/
+
+.wrapper {
+  .footer-wrap {
+
+    .apointment {
+      background-color: #fff;
+
+      .wrap {
+        
+        .center {
+          text-align: center;
+
+          .logo {
+            max-width: 540px;
+            width: 100%;
+            margin: 0 auto 44px;
+          }
+          .reserve {
+            color: #fff;
+            font-weight: 500;
+            display: inline-block;
+            padding: 4px 10px;
+            background-color: #FF5050;
+            margin-bottom: 8px;
+          }
+          .txt1 {
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 20px;
+          }
+          .txt2 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 30px;
+          }
+          .btn {
+            a {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 10px;
+              max-width: 413px;
+              width: 100%;
+              height: 63px;
+              line-height: 63px;
+              margin: 0 auto;
+              font-size: 30px;
+              color: #fff;
+              font-weight: bold;
+              background-color: #1CA851;
+              border-radius: 18px;
+              box-shadow: 4px 4px 0 #8C504F;
+              transition: all .3s;
+
+              &:hover {
+                box-shadow: none;
+              }
+              &::before {
+                content: "";
+                background-image: url(../img/top/reserve_1.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 28px;
+                height: 28px;
+                display: inline-block;
+              }
+            }
+          }
+        }
+      }
+    }
+    .schedule {
+      margin-top: 60px;
+
+      .wrap {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        padding: 0 20px;
+
+        .left {
+          line-height: 26px;
+          flex-shrink: 0;
+
+          .address {
+            margin-bottom: 6px;
+          }
+          .flex {
+            display: flex;
+            margin-top: 20px;
+
+            .l-box {
+              font-size: 20px;
+
+              .center {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                min-width: 80px;
+              
+                &::after {
+                  content: "";
+                  display: inline-block;
+                  width: 40px;
+                  height: 2px;
+                  background-color: #000;
+                }
+                &.off {
+                  &::after {
+                    margin-left: 20px;
+                  }
+                }
+              }
+            }
+            .r-box {
+              margin-left: 20px;
+              font-size: 18px;
+
+              .item {
+                margin-bottom: 15px;
+
+                &:nth-child(4) {
+                  margin-bottom: 6px;
+                }
+                &:last-child {
+                  margin-bottom: 0;
+                }
+                .week {
+                  min-width: 80px;
+                  display: inline-block;
+                  margin-right: 10px;
+                }
+                .day {
+                  display: inline-block;
+                  min-width: 36px;
+                  margin-right: 10px;
+                }
+                .hour {
+                  display: inline-block;
+                  margin-right: 20px;
+                }
+                .sun {
+                  
+                }
+                .txt {
+                  font-size: 14px;
+                  line-height: 20px;
+                  padding-left: 1em;
+                  text-indent: -1em;
+                }
+              }
+            }
+          }
+        }
+        .right {
+          max-width: 633px;
+        }
+      }
+    }
+    .footer {
+      margin-top: 40px;
+      padding: 40px 15px 25px;
+      background-color: #F5F0E9;
+
+      &-logo {
+        width: 90px;
+        height: 90px;
+        margin: 0 auto 54px;
+      }
+      &-nav {
+        margin-bottom: 20px;
+  
+        .ul {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 30px;
+  
+          &:last-child {
+            margin-bottom: 0;
+          }
+          .li {
+            padding: 0 20px;
+            border-right: 1px solid #000;
+  
+            &:last-child {
+              border-right: unset;
+            }
+            a {
+              position: relative;
+  
+              &::after {
+                content: '';
+                /*絶対配置で線の位置を決める*/
+                position: absolute;
+                bottom: -2px;
+                left: 0%;
+                /*線の形状*/
+                width: 100%;
+                height: 2px;
+                background:#333333;
+                /*アニメーションの指定*/
+                transition: all .3s;
+                transform: scale(0, 1);/*X方向0、Y方向1*/
+                transform-origin: left top;/*左上基点*/
+              }
+              &:hover {
+                &::after {
+                  transform: scale(1, 1);/*X方向にスケール拡大*/
+                }
+              }
+            }
+          }
+        }
+      }
+      .sns-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  
+        .li {
+          width: 34px;
+          height: 34px;
+  
+          &:nth-child(2) {
+            margin: 0 8px;
+          }
+        }
+      }
+      .copyright {
+        text-align: center;
+        margin-top: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .wrapper {
+    .footer-wrap {
+      .contact {
+        .section-contents {
+          .ul {
+            .li {
+              &:nth-child(2) {
+                background-image: url(../img/top/ページ下部問い合わせ.png);
+
+                .li-bg {
+                  padding: 189px 0;
+                }
+              }
+              .li-bg {
+                .txt {
+                  font-size: 14px;
+                }
+                .tel {
+                  font-size: 40px;
+
+                  &::before {
+                    width: 38px;
+                    height: 40px;
+                    top: 4px;
+                    left: 10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .wrapper {
+    .footer-wrap {
+      .schedule {
+        margin-top: 34px;
+
+        .wrap {
+          flex-direction: column;
+          gap: 15px;
+          
+          .left {
+            max-width: 100%;
+            margin: 0 auto;
+            font-size: 14px;
+
+            .flex {
+              flex-direction: column;
+              font-size: 14px;
+              margin-top: 40px;
+
+              .l-box {
+                .center {
+                  margin-bottom: 20px;
+                  justify-content: center;
+                  font-size: 14px;
+
+                  &::after {
+                    display: none;
+                  }
+                }
+              }
+              .r-box {
+                margin-left: 0;
+
+                .item {
+                  font-size: 14px;
+
+                  .week {
+                    min-width: 45px;
+                    margin-right: 0;
+                  }
+                  .day {
+                    min-width: 28px;
+                  }
+                  .hour {
+                    margin-right: 12px;
+                  }
+                }
+              }
+              .cen {
+                text-align: center;
+              }
+            }
+          }
+          .right {
+            max-width: 500px;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .wrapper {
+    .footer-wrap {
+
+      .apointment {
+        background-color: #fff;
+  
+        .wrap {
+          
+          .center {
+            padding: 0 20px;
+  
+            .logo {
+              max-width: 330px;
+              margin: 0 auto 28px;
+            }
+            .reserve {
+              margin-bottom: 15px;
+            }
+            .txt1 {
+              font-size: 20px;
+              line-height: 27px;
+              margin-bottom: 10px;
+            }
+            .txt2 {
+              font-size: 25px;
+              font-weight: bold;
+              margin-bottom: 30px;
+              
+              a {
+                font-size: 40px;
+              }
+            }
+            .btn {
+              a {
+                max-width: 331px;
+                font-size: 25px;
+  
+                &::before {
+                  width: 18px;
+                  height: 18px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .footer {
+        padding: 40px 15px 100px;
+
+        .footer-nav {
+          display: flex;
+          justify-content: space-around;
+          margin-bottom: 17px;
+          
+          .ul {
+            gap: 15px;
+            flex-direction: column;
+
+            .li {
+              font-size: 14px;
+              margin-bottom: 0;
+              border-right: unset;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+        .copyright {
+          font-size: 14px;
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+}
